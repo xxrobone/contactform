@@ -8,4 +8,5 @@ mailBtn.addEventListener('click', () => {
   formWrapper.classList.toggle('active');
   contactInfo.classList.toggle('active');
   formContainer.classList.toggle('active');
+  mailBtn.classList.toggle('btn_ani');
 });
