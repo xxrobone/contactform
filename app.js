@@ -1,6 +1,6 @@
 const mailBtn = document.querySelector('.mail_btn');
 const inner = document.querySelector('.inner');
-const box = document.querySelector('.box');
+const wrapper = document.querySelector('.wrapper');
 const formWrapper = document.querySelector('.contact_form_wrapper');
 const form = document.querySelector('#form');
 const contactInfo = document.querySelector('.contact_info_container');
@@ -9,7 +9,7 @@ const underlay = document.querySelector('.underlay');
 
 mailBtn.addEventListener('click', () => {
   formWrapper.classList.toggle('active');
-  box.classList.toggle('active');
+  wrapper.classList.toggle('active');
   contactInfo.classList.toggle('active');
   formContainer.classList.toggle('active');
   mailBtn.classList.toggle('active');
@@ -35,7 +35,7 @@ const animate = () => {
     })
       .add(
         {
-          targets: '.selectors .first',
+          targets: '.icons .first',
           translateX: [0, '70vw'],
           scaleY: [0, 1],
           duration: 600,
@@ -50,10 +50,11 @@ const animate = () => {
             mailBtn.setAttribute('disabled', false);
           },
         }
+        /* If you could add more icons and stagger also delay animations etc */
         /* '-=400' */
       )
       .add({
-        targets: '.selectors .first',
+        targets: '.icons .first',
         delay: 600,
         zIndex: -1,
       });
@@ -64,22 +65,19 @@ const animate = () => {
       rotate: 0,
       duration: 400,
       easing: 'easeInOutSine',
-    }).add(
-      {
-        targets: '.selectors .selector',
-        translateY: 0,
-        opacity: {
-          value: 0,
-          duration: 0,
-        },
-        duration: 300,
-        delay: 0,
-        easing: 'easeInOutSine',
-        complete: function () {
-          mailBtn.setAttribute('disabled', false);
-        },
-      }
-      /* '-=400' */
-    );
+    }).add({
+      targets: '.icons .icon',
+      translateY: 0,
+      opacity: {
+        value: 0,
+        duration: 0,
+      },
+      duration: 300,
+      delay: 0,
+      easing: 'easeInOutSine',
+      complete: function () {
+        mailBtn.setAttribute('disabled', false);
+      },
+    });
   }
 };

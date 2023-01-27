@@ -249,14 +249,15 @@ label {
   background-color: rgb(255, 255, 255);
 }
 
-.selectors {
+.icons {
       display: flex;
       justify-content: center;
       flex-direction: column;
       position: relative;
       z-index: 10;
 }
-.selector {
+
+.icon {
   margin: 0px auto;
   height: 32px;
   width: 32px;
