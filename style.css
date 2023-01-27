@@ -13,6 +13,7 @@ body {
     justify-content: center;
 }
 
+
 .contact_form_wrapper {
     position: relative;
     right: 2rem;
@@ -28,6 +29,25 @@ body {
     background: rgba(0, 0, 0, .0125);
     backdrop-filter: blur(13px);
     -webkit-backdrop-filter: blur(3px);
+}
+
+
+.contact_form_wrapper {
+  width: 0%;
+  height: 100%;
+  /* top: 0; left:0;
+  position: fixed; */
+  opacity: 0;
+  background: #000;
+  transition: background 1s, opacity 0.4s, width 0s 0.4s;
+}
+
+.active {
+  width: 100%;
+  opacity: 1;
+  z-index: 999;
+
+  transition: background 1s, opacity 0.4s, width 0s;
 }
 
 .contact_info_container {
