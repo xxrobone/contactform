@@ -6,61 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/d3412194f0.js" crossorigin="anonymous"></script>
-    <script src="./app.js" defer></script>
+    <script src="./anime.min.js"></script>
+    <script src="./app.js" defer type="module"></script>
     <link rel="stylesheet" href="./style.css">
     <title>contact form</title>
 </head>
 
 <body>
-    <div class="sidebar">
-        <i class="fa-regular fa-envelope soc_item soc_icon mail_btn"><span class="mail_btn_bg"></span></i>
+    <div class="underlay"></div>
+    <div class="container">
+
+        <div class="sidebar">
+            <!-- <i class="fa-regular fa-envelope mail_btn"></i> -->
+            <div class="mail_btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4Z"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M22 7L13.03 12.7C12.7213 12.8934 12.3643 12.996 12 12.996C11.6357 12.996 11.2787 12.8934 10.97 12.7L2 7"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+
+        </div>
+        <div class="selectors">
+            <span class="selector first"></span>
+        </div>
     </div>
+
     <div class="box">
         <div class="inner">
-            <i class="fa-regular fa-envelope soc_item soc_icon mail_test"></i>
+
+        </div>
+
+        <div class='contact_form_wrapper'>
+            <div class='contact_info_container'>
+                <h2 class='headline_text'>Contact</h2>
+                <div class='contact_info'>
+                    <span class='email'>robertwagar@gmail.com</span>
+                </div>
+                <div class='socials'>
+                    <a href='https://www.linkedin.com/in/robert-w%C3%A4gar-1b4661139/' target='_blank'
+                        rel='noreferrer noopener'>
+                        <i class="fa-brands fa-linkedin-in soc-item soc-icon"></i>
+                    </a>
+
+                    <a href='https://github.com/robonexx' target='_blank' rel='noreferrer noopener'>
+                        <i class="fa-brands fa-github soc-item soc-icon"></i>
+                    </a>
+
+                    <a href='https://codepen.io/robonexx' target='_blank' rel='noreferrer noopener'>
+                        <i class="fa-brands fa-codepen soc-item soc-icon"></i>
+                    </a>
+                </div>
+            </div>
+            <div class='form_container'>
+                <form class='form' id="form" method="post" action="mailto:robert.wagar@gmail.com">
+                    <label>name:</label>
+                    <input type='text' name='name' autoComplete='off' placeholder="name" required>
+                    <label>email:</label>
+                    <input type='email' name='email' autoComplete='off' placeholder="email" required>
+                    <label>message:</label>
+                    <textarea type='textarea' name='message' autoComplete='off' placeholder="message"
+                        required></textarea>
+
+                    <button type='submit' class='submit_btn'>
+                        Submit
+                    </button>
+
+                </form>
+            </div>
+            <p class='form_answer'>Thanks for Your mail!</p>
         </div>
     </div>
-    <div class='contact_form_wrapper'>
-        <div class='contact_info_container'>
-            <h1 class='headline_text'>Contact</h1>
-            <div class='contact_info'>
-                <span class='email'>robertwagar@gmail.com</span>
-            </div>
-            <p class='contact_text'>
-                Lets talk!
-            </p>
-            <div class='socials'>
-                <a href='https://www.linkedin.com/in/robert-w%C3%A4gar-1b4661139/' target='_blank'
-                    rel='noreferrer noopener'>
-                    <i class="fa-brands fa-linkedin-in soc-item soc-icon"></i>
-                </a>
 
-                <a href='https://github.com/robonexx' target='_blank' rel='noreferrer'>
-                    <i class="fa-brands fa-github soc-item soc-icon"></i>
-                </a>
 
-                <a href='https://codepen.io/robonexx' target='_blank' rel='noreferrer'>
-                    <i class="fa-brands fa-codepen soc-item soc-icon"></i>
-                </a>
-            </div>
-        </div>
-        <div class='form_container'>
-            <form class='form' id="form" action='#'>
-                <label>name:</label>
-                <input type='text' name='name' autoComplete='off' placeholder="name" required />
-                <label>email:</label>
-                <input type='email' name='email' autoComplete='off' placeholder="email" required>
-                <label>message:</label>
-                <textarea type='textarea' name='message' autoComplete='off' placeholder="message" required></textarea>
-
-                <button type='submit' class='submit_btn'>
-                    Submit
-                </button>
-
-            </form>
-        </div>
-        <p class='form_answer'>Thanks for Your mail!</p>
-    </div>
 
 </body>
 
