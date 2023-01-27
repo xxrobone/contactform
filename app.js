@@ -36,7 +36,7 @@ const animate = () => {
       .add(
         {
           targets: '.icons .first',
-          translateX: [0, '70vw'],
+          translateX: [0, '50vw'],
           scaleY: [0, 1],
           duration: 600,
           opacity: [
