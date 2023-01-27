@@ -267,8 +267,8 @@ body {
   top: 30vh;
   left: 50%;
   transform: translate(-50%);
-  width: 40%;
-  height: 40%;
+  width: 80%;
+  height: 60%;
   z-index: 1000;
 }
 
@@ -298,4 +298,11 @@ body {
     z-index: 100;
     font-weight: bolder;
     transition: color .5s;
+}
+
+@media (min-widht: 980px) {
+  .box {
+    width: 40%;
+    height: 40%;
+  }
 }
