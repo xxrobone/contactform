@@ -5,13 +5,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/d3412194f0.js" crossorigin="anonymous"></script>
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
     <title>contact form</title>
 </head>
 
 <body>
+    <div className='contact_form_wrapper'>
+        <div className='contact_info_container'>
+            <h1 className='headline_text'>Contact</h1>
+            <div className='contact_info'>
+                <span className='email'>robertwagar@gmail.com</span>
+            </div>
+            <p className='contact_text'>
+                Lets talk!
+            </p>
+            <div className='socials'>
+                <a href='https://www.linkedin.com/in/robert-w%C3%A4gar-1b4661139/' target='_blank'
+                    rel='noreferrer noopener'>
+                    <i class="fa-brands fa-linkedin-in soc-item soc-icon"></i>
+                </a>
 
+                <a href='https://github.com/robonexx' target='_blank' rel='noreferrer'>
+                    <i class="fa-brands fa-github soc-item soc-icon"></i>
+                </a>
+
+                <a href='https://codepen.io/robonexx' target='_blank' rel='noreferrer'>
+                    <i class="fa-brands fa-codepen soc-item soc-icon"></i>
+                </a>
+            </div>
+        </div>
+        <div className='form-container'>
+            <form className='form' action='#'>
+                <p className="contact-text">Or send a message here...</p>
+                <label>name:</label>
+                <input type='text' name='name' autoComplete='off' placeholder="name" required />
+                <label>email:</label>
+                <input type='email' name='email' autoComplete='off' placeholder="email" required>
+                <label>message:</label>
+                <textarea type='textarea' name='message' autoComplete='off' placeholder="message" required></textarea>
+
+                <button type='submit' className='submit-btn'>
+                    Submit
+                </button>
+                <p className='form-answer'>Thanks for Your mail!</p>
+            </form>
+        </div>
+    </div>
 
 </body>
 
